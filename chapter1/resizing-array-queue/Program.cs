@@ -61,7 +61,7 @@ namespace resizing_array_queue
             Our data is going to rotate around the queue. 
 
             We'll need to have a pointer to the front of the queue.
-            And a pointer to the tail fo the queue will be useful too.
+            And a pointer to the tail for the queue will be useful too.
 
             When we enqueue, we'll add to the tail.
             When we dequeue, we'll return from the head and bump the head forward.
@@ -136,11 +136,6 @@ namespace resizing_array_queue
 
         private void Resize(int newSize)
         {
-            // if (newSize <= 4)
-            // {
-            //     return;
-            // }
-
             var newArray = new int[newSize];
 
             for (int i = 0, pointer = _head; i < _size; i++, pointer = Increment(pointer))
